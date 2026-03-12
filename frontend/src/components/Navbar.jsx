@@ -34,7 +34,13 @@ export default function Navbar() {
   const initials = user.avatar || user.name?.split(' ').map(n => n[0]).join('').toUpperCase().slice(0, 2) || 'U';
 
   return (
-    <AppBar ref={navRef} position="fixed" elevation={0}>
+    <AppBar ref={navRef} position="fixed" elevation={0} sx={{
+  maxWidth: '1600px',
+  left: '50%',
+  transform: 'translateX(-50%)',
+  width: '100%',
+        }}>
+
       <Toolbar sx={{ px: { xs: 2, md: 4 }, height: 64, justifyContent: 'space-between' }}>
 
         {/* Logo */}
